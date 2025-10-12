@@ -1,4 +1,4 @@
-package sendkeys;
+package seleniumTwo;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -6,18 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class clearTextField{
+import java.util.List;
+
+//How to find more than one web element in Selenium WebDriver? //findElements
+public class findMoreoneElement {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://omayo.blogspot.com/");
-//        driver.findElement(By.id("textbox1")).clear();
-        WebElement clearcommand = driver.findElement(By.id("textbox1"));
-        String text = clearcommand.getAttribute("value");
-        System.out.println("Text in the text field: " + text);
-        clearcommand.clear();
-        driver.quit();
+        driver.get("https://tutorialsninja.com/demo/");
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        System.out.println(links.size());
 
+        driver.quit();
     }
 }

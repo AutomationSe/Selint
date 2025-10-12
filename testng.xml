@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/User/Desktop/Eatme Files/interviewpractice"><classes/></test></suite>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SeleniumTestsSuite" parallel="false">
+    <test name="SeleniumTests">
+        <classes>
+            <class name="seleniumone.referenceWebdriver"/>
+        </classes>
+    </test>
+</suite>
